@@ -12,7 +12,7 @@
 package soal
 
 import "strconv"
-func likes(people []string) string {
+func Likes(people []string) string {
 	result := ""
 	if len(people) == 0 {
 		result = "no one likes this"
