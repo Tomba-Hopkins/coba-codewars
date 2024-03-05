@@ -13,6 +13,7 @@
 package soal
 
 import "fmt"
+
 func FindOdd(seq []int) int {
 	
 	temp := map[int]int{}
