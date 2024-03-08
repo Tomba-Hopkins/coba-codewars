@@ -25,9 +25,9 @@ func Vaporcode(s string) string {
 		}
 	}
 
-	if len(result) > 0 && string(result[len(result) - 1]) == " " {
-		result = result[:len(result) - 2]
-	}
+	for string(result[len(result) - 1]) == " "{
+		result = result[:len(result) - 1]
+	  }
 
 
 	return result
