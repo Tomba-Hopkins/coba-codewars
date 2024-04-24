@@ -16,7 +16,7 @@ package soal
 
 import "strings"
 
-func duplicate_count(s1 string) (res int) {
+func Duplicate_count(s1 string) (res int) {
 
 	newS := strings.ToLower(s1)
 	abjad := map[string]int{
