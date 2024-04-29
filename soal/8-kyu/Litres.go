@@ -15,7 +15,7 @@ import "math"
 
 func Litres(time float64) int {
 
-	segelas := math.Floor(time * 0.5)	
+	segelas := math.Floor(time * 0.5)
 	return int(segelas)
 
 }
