@@ -12,8 +12,7 @@ package soal
 func SimpleStrChar(s string) (res []int) {
 
 	up, low, num, other := 0, 0, 0, 0
-
-
+	
 	for i := 0; i < len(s); i++ {
 
 		str := string(s[i])
