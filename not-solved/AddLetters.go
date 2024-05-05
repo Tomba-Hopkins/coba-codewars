@@ -26,30 +26,29 @@ func AddLetters(letters []rune) rune {
 	kodingkanDuluLe := "zabcdefgihjklmnopqrstuvwxy"
 	abjad := map[rune]int{}
 
-	for i, k := range kodingkanDuluLe{
+	for i, k := range kodingkanDuluLe {
 		abjad[k] = i
 	}
 
-
 	dahDikodingkanNihLe := map[int]rune{}
 
-	for j := 0; j < len(kodingkanDuluLe); j++{
+	for j := 0; j < len(kodingkanDuluLe); j++ {
 		dahDikodingkanNihLe[j] = rune(kodingkanDuluLe[j])
 	}
 
-
 	total := 0
-	
-	for l := 0; l < len(letters); l++{
-		for r := 0; r < abjad[letters[l]]; r++{
-			total++
-		}
+
+	for _, l := range letters{
+		total += abjad[l]
 	}
 
+	for total > 25 {
+		total -= 26
+	}
+
+	fmt.Println(total)
 	fmt.Println(string(dahDikodingkanNihLe[total]))
 
-
 	return dahDikodingkanNihLe[total]
-	
 
 }
