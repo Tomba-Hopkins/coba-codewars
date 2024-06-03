@@ -14,10 +14,19 @@
 // Answer :
 package soal
 
+// func CountSheeps(numbers []bool) (res int) {
+// 	for _, n := range numbers{
+// 		if n == true {
+// 		  res++
+// 		}
+// 	  }
+// 	  return res
+// }
+
 func CountSheeps(numbers []bool) (res int) {
 	for _, n := range numbers{
-		if n == true {
-		  res++
+		if n {
+			res++
 		}
 	  }
 	  return res

@@ -20,6 +20,22 @@ import "strings"
 
 type MyString string
 
+// func (s MyString) IsUpperCase() bool {
+// 	temp := 0
+
+// 	for i := 0; i < len(s); i++ {
+// 		if string(s[i]) != strings.ToUpper(string(s[i])){
+// 			temp++
+// 		}
+// 	}
+
+// 	if temp > 0 {
+// 		return false
+// 	}
+
+// 	return true
+// }
+
 func (s MyString) IsUpperCase() bool {
 	temp := 0
 
@@ -29,9 +45,7 @@ func (s MyString) IsUpperCase() bool {
 		}
 	}
 
-	if temp > 0 {
-		return false
-	}
+	
 
-	return true
+	return temp >= 0
 }
