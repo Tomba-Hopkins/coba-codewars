@@ -7,7 +7,6 @@
 package soal
 
 import (
-	"fmt"
 	"strconv"
 )
 
@@ -19,27 +18,27 @@ func SumOfIntegersInString(strng string) (res int) {
 		angka[string(ar)] = true
 	}
 
-	num := []string{}
 	temp := ""
+	strArr := []string{}
 
-	for i := 0; i < len(strng) - 1; i++{
-		str := string(strng[i])
-
-		if angka[str] && angka[string(strng[i + 1])]{
-			temp += str
-		} else if angka[str] {
-			num = append(num, temp + str)
+	for i := 0; i < len(strng); i++{
+		if angka[string(strng[i])]{
+			temp += string(strng[i])
+		} else if temp != "" {
+			strArr = append(strArr, temp)
 			temp = ""
 		}
-	}
-	
-	
-	for _, numb := range num{
-		intNum, _ := strconv.Atoi(numb)
-		res += intNum
+		
 	}
 
-	fmt.Println(num)
-	
-	return 
+	if temp != ""{
+		strArr = append(strArr, temp)
+	}
+
+	for _, i := range strArr{
+		intI, _ := strconv.Atoi(i)
+		res += intI
+	}
+
+	return
 }
